@@ -18,4 +18,4 @@ fechar o browser
 *** Test Cases ***
 Cenário 1: Teste de abrir o navegador
     abrir navegador     
-    fechar o browser
+    fechar o browser 

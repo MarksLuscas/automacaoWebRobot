@@ -38,7 +38,7 @@ preencher campos
     Select From List By Value     ${select_country}     brazil    
     Select From List By Value     ${select_color}       blue  
     Select From List By Value     ${select_animals}       dog  
-    Click Element                 ${select_calendario} 
+    Click Element                 ${select_calendario}  
     Click Element        //*[@id="ui-datepicker-div"]/table/tbody/tr[3]/td[4]/a   
 
 
