@@ -3,18 +3,15 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${input_name}            id:name
-${input_email}           id:email
-${input_phone}           id:phone
-${input_textarea}        id:textarea
-${sunday_checkbox}       id:sunday 
-${saturday_checkbox}     id:saturday 
-${select_country}        id:country
-${select_color}          id:colors    
-${select_animals}        id:animals
-${select_calendario}     id:datepicker
-
-
+${input_name}            id:firstName
+${input_lastName}        id:lastName
+${input_email}           id:userEmail
+${select_gender}         //*[@id="genterWrapper"]/div[2]/div[1]
+${input_phone}           id:userNumber
+${select_calendario}     id:dateOfBirthInput
+${select_month}          //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[1]/select   
+${select_year}           //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/div[2]/select
+${select_day}            //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[5]
 *** Keywords ***
 
 
@@ -24,22 +21,19 @@ abrir navegador
     Set Selenium Speed         1 seconds
 
 acessar site
-     Go to       https://testautomationpractice.blogspot.com
+     Go to       https://demoqa.com/automation-practice-form
 
 
 preencher campos
-    Input Text    ${input_name}    Lucas
-    Input Text    ${input_email}     lucas.teste@testando.com
-    Input Text    ${input_phone}    911112223
-    Input Text    ${input_textarea}    Texto texto
-    Select Radio Button      gender    male
-    Select Checkbox    ${sunday_checkbox}
-    Select Checkbox    ${saturday_checkbox}
-    Select From List By Value     ${select_country}     brazil    
-    Select From List By Value     ${select_color}       blue  
-    Select From List By Value     ${select_animals}       dog  
-    Click Element                 ${select_calendario}  
-    Click Element        //*[@id="ui-datepicker-div"]/table/tbody/tr[3]/td[4]/a   
+    Input Text                   ${input_name}            text=Lucas
+    Input Text                   ${input_lastName}        text=Marques
+    Input Text                   ${input_email}           text=lucas.teste@testando.com
+    Click Element                ${select_gender}   
+    Input Text                   ${input_phone}           text=911112223
+    Click Element                ${select_calendario}
+    Select From List By Value    ${select_month}          4   
+    Select From List By Value    ${select_year}           1999  
+    Click Element                ${select_day}            
 
 
 
