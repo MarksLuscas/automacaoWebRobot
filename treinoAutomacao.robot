@@ -14,8 +14,8 @@ ${select_year}           //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div
 ${select_day}            //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[5]
 ${click_subject}         id:subjectsContainer
 ${input_subject}         id:subjectsInput
-${select_hobbies}        xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/form/div[7]/div[2]/div[1]/label
-${input_text}            id:currentAddress    
+${select_hobbies}        //div[@class="custom-control custom-checkbox custom-control-inline"]
+${textarea_address}            id:currentAddress    
 
 
 
@@ -32,20 +32,21 @@ acessar site
 
 
 preencher campos
-    Input Text                   ${input_name}            text=Lucas
-    Input Text                   ${input_lastName}        text=Marques
-    Input Text                   ${input_email}           text=lucas.teste@testando.com
+    Input Text                   ${input_name}                  text=Lucas
+    Input Text                   ${input_lastName}              text=Marques
+    Input Text                   ${input_email}                 text=lucas.teste@testando.com
     Click Element                ${select_gender}   
-    Input Text                   ${input_phone}           text=911112223
+    Input Text                   ${input_phone}                 text=911112223
     Click Element                ${click_calendario}
-    Select From List By Value    ${select_month}          4   
-    Select From List By Value    ${select_year}           1999  
+    Select From List By Value    ${select_month}                4   
+    Select From List By Value    ${select_year}                 1999  
     Click Element                ${select_day}            
     Click Element                ${click_subject}   
-    Input Text                   ${input_subject}         text=Computer Science
-    Press Keys                   ${None}                  keys=button \ue007            
+    Input Text                   ${input_subject}               text=Computer Science
+    Press Keys                   ${None}                        keys=button \ue007            
+    Sleep                        1s
     Click Element                ${select_hobbies}    
-    Input Text                   ${input_text}            text=Rua Teste 1245 - Bairro 333
+    Input Text                   ${textarea_address}            text=Rua Teste 1245 - Bairro 333
 
     
 
