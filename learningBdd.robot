@@ -7,8 +7,7 @@ Library    SeleniumLibrary
 ${nomeDoLivro}    Vampiro: A Mascara
 
 #Configuracao
-${site_google}    https://www.google.com.br
-${URL}            https://www.amazon.com.br/ref=nav_logo
+${URL}            https://www.amazon.com.br
 ${browser}        chrome
 
 
@@ -22,14 +21,10 @@ ${mensagem_de_sucesso}            //*[@id="sw-atc-details-single-container"]/div
 
 *** Keywords ***
 Dado que estou no site da Amazon
-    Open Browser                 ${site_google}  ${browser}
+    Open Browser                 ${URL}  ${browser}
        Set Window Size     1910   1090 
     Sleep     1s
-    Go to                        ${URL}     
-    Press Keys                   ${None}                        keys=button \ue035  
-    Sleep     1s
-     
-
+    
 E procuro pelo livro desejado
     Input Text                   ${input_de_pesquisa}   ${nomeDoLivro}
     Click Element                ${botao_de_pesquisa}
@@ -40,7 +35,7 @@ E entro na pagina dele
 Quando clico em adicionar ao carrinho
     Click Element                ${botao_de_add_ao_carrinho}
     Sleep   1s
-    Click Element                ${botao_Nao_Obrigado}
+#   Click Element                ${botao_Nao_Obrigado}
 
 Entao vejo que foi adicionado
     Sleep   1s
