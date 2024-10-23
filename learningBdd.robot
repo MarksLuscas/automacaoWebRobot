@@ -24,6 +24,7 @@ Dado que estou no site da Amazon
     Open Browser                 ${URL}  ${browser}
        Set Window Size     1910   1090 
     Sleep     1s
+    Press Keys        ${None}     F5
     
 E procuro pelo livro desejado
     Input Text                   ${input_de_pesquisa}   ${nomeDoLivro}
@@ -45,6 +46,7 @@ Entao vejo que foi adicionado
 
 *** Test Cases ***
 Cenário 1: Colocar um livro no carrinho no site da Amazon
+    [Tags]  regressivo
   Dado que estou no site da Amazon
   E procuro pelo livro desejado
   E entro na pagina dele

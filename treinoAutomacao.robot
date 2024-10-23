@@ -43,7 +43,7 @@ preencher campos
     Click Element                ${select_day}            
     Click Element                ${click_subject}   
     Input Text                   ${input_subject}               text=Computer Science
-    Press Keys                   ${None}                        keys=button \ue007            
+    Press Keys                   ${None}                        ENTER            
     Sleep                        1s
     Click Element                ${select_hobbies}    
     Input Text                   ${textarea_address}            text=Rua Teste 1245 - Bairro 333
