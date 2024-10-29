@@ -5,11 +5,13 @@ Resource     ../../Steps/Main_Steps.robot
 *** Test Cases ***
 TC01 - Reservando passagem de destinos dentro dos EUA na classe econômica
     Dado que eu acesse o php travels
-    E realize o cadastro 
+    E clique para fazer cadastro
+    E realize o cadastro
+    E clique para fazer o login 
     E faça o Login
     Quando eu realizo uma busca de um vôo ida e volta
     E saindo de Los Angeles EUA
-    #E indo para 
+    E indo para London
     #E saindo na data
     #E voltando na data
     #Quando eu clico em buscar

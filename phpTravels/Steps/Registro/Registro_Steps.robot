@@ -4,10 +4,6 @@ Resource    ../../Elements/Main_Elements.resource
 
 *** Keywords ***
 E realize o cadastro
-    Wait Until Element Is Visible      ${Home.A_Account}            10
-    Click Element                      ${Home.A_Account} 
-    Wait Until Element Is Visible      ${Home.A_Signup}            10
-    Click Element                      ${Home.A_Signup}
     Wait Until Element Is Visible      ${Registro.Input_PrimeiroNome}  10
     Input Text                         ${Registro.Input_PrimeiroNome}  ${PrimeiroNome}
     Wait Until Element Is Visible      ${Registro.Input_UltimoNome}    10
@@ -28,3 +24,4 @@ E realize o cadastro
     Wait Until Element Is Visible      ${Registro.Button_Signup}       10 
     Sleep                              2s
     Click Element                      ${Registro.Button_Signup}
+    Title Should Be                    title=Signup Success
