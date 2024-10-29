@@ -11,3 +11,5 @@
 ...    Input_Senha=//input[@name="password"]
 ...    Button_Signup=//*[@id="submitBTN"]
 ...    Button_Cookie=//*[@id="recaptcha-anchor-label"]
+...    Btn_Account=//*[@id="navbarSupportedContent"]/div[2]/ul/li[3]/a
+...    A_OpcaoLogin=//*[@href="https://www.phptravels.net/login"] 

@@ -7,9 +7,10 @@
 ...    A_OpcaoRegistro=//*[@href="https://www.phptravels.net/signup"]
 
 #Voos
-...    Btn_Ida=//select[@id="hotels_city"]
-...    Input_IdaeVolta=//input[@id="round-trip"]
-...    Input_Ida=//input[@id="autocomplete"]
+...    Btn_IdaeVolta=//input[@id="round-trip"]
+...    Btn_Ida=//*[@id="onereturn"]/div[1]/div[1]/div[2]/span/span[1]/span
+...    Input_Ida=//*[@id="fadein"]/span/span/span[1]/input
+...    Btn_Volta=//*[@id="onereturn"]/div[2]/div[2]/div[2]/span/span[1]/span
 ...    Input_Volta=//input[@id="autocomplete2"]
 ...    Input_DataIda=(//input[@id="departure"])[1]
 ...    Input_DataVolta=(//input[@id="return"])[1]

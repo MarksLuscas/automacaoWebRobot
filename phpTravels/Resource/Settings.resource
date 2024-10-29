@@ -11,5 +11,5 @@ ${Browser}  chrome
 ${PrimeiroNome}  Edward
 ${UltimoNome}    Sheeran
 ${Telefone}      555-431
-${Email}         testeee@gmail.com
+${Email}         ateste@gmail.com
 ${Senha}         123456
